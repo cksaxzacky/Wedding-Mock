@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="meta.rsvp.title">RSVP — Sax & Noon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&family=Noto+Sans+Thai:wght@300;400;500&family=Noto+Serif+Thai:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="brand">S &amp; N</a>
+    <nav class="site-nav">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="story.html" data-i18n="nav.story">Our Story</a>
+      <a href="gallery.html" data-i18n="nav.gallery">Gallery</a>
+      <a href="details.html" data-i18n="nav.details">Details</a>
+      <a href="rsvp.html" class="active" data-i18n="nav.rsvp">RSVP</a>
+    </nav>
+    <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
+      <span data-lang="th">TH</span> / <span data-lang="en">EN</span>
+    </button>
+    <button class="nav-burger" id="navBurger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <p class="eyebrow" data-i18n="rsvp.eyebrow">RSVP</p>
+      <h1 data-i18n="rsvp.title">Will you join us?</h1>
+      <p class="page-sub" data-i18n="rsvp.sub">กรุณาตอบรับภายในวันที่ 30 พฤศจิกายน 2026</p>
+    </section>
+
+    <section class="form-wrap">
+      <form id="rsvpForm" class="rsvp-form" novalidate>
+        <div class="field">
+          <label for="name" data-i18n="rsvp.f.name">Full Name</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+
+        <div class="field">
+          <label for="email" data-i18n="rsvp.f.email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="field">
+          <label for="phone" data-i18n="rsvp.f.phone">Phone (optional)</label>
+          <input type="tel" id="phone" name="phone" />
+        </div>
+
+        <div class="field">
+          <span class="label" data-i18n="rsvp.f.attending">Will you attend?</span>
+          <div class="radio-row">
+            <label><input type="radio" name="attending" value="yes" required /> <span data-i18n="rsvp.f.yes">Yes, I'll be there</span></label>
+            <label><input type="radio" name="attending" value="no" /> <span data-i18n="rsvp.f.no">Sorry, can't make it</span></label>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="guests" data-i18n="rsvp.f.guests">Number of guests (including you)</label>
+          <select id="guests" name="guests">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="diet" data-i18n="rsvp.f.diet">Dietary requirements (optional)</label>
+          <input type="text" id="diet" name="diet" placeholder="e.g. Vegetarian / Halal / Allergies" />
+        </div>
+
+        <div class="field">
+          <label for="message" data-i18n="rsvp.f.message">Message to the couple (optional)</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="rsvpSubmit" data-i18n="rsvp.f.submit">Send RSVP</button>
+
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p data-i18n="footer.line">Sax &amp; Noon · 25.12.2026</p>
+  </footer>
+
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/rsvp.js"></script>
+</body>
+</html>

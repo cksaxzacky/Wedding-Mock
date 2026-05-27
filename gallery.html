@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="meta.gallery.title">Gallery — Sax & Noon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&family=Noto+Sans+Thai:wght@300;400;500&family=Noto+Serif+Thai:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="brand">S &amp; N</a>
+    <nav class="site-nav">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="story.html" data-i18n="nav.story">Our Story</a>
+      <a href="gallery.html" class="active" data-i18n="nav.gallery">Gallery</a>
+      <a href="details.html" data-i18n="nav.details">Details</a>
+      <a href="rsvp.html" data-i18n="nav.rsvp">RSVP</a>
+    </nav>
+    <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
+      <span data-lang="th">TH</span> / <span data-lang="en">EN</span>
+    </button>
+    <button class="nav-burger" id="navBurger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <p class="eyebrow" data-i18n="gallery.eyebrow">Gallery</p>
+      <h1 data-i18n="gallery.title">Moments together</h1>
+      <p class="page-sub" data-i18n="gallery.sub">A small collection of our favorite memories</p>
+    </section>
+
+    <section class="gallery-grid" id="galleryGrid">
+      <!-- Placeholder images via picsum.photos with seed for stability -->
+      <figure class="gallery-item"><img src="https://picsum.photos/seed/wedding1/800/1000" alt="Photo 1" loading="lazy" /></figure>
+      <figure class="gallery-item"><img src="https://picsum.photos/seed/wedding2/900/700" alt="Photo 2" loading="lazy" /></figure>
+      <figure class="gallery-item"><img src="https://picsum.photos/seed/wedding3/800/800" alt="Photo 3" loading="lazy" /></figure>
+      <figure class="gallery-item"><img src="https://picsum.photos/seed/wedding4/700/900" alt="Photo 4" loading="lazy" /></figure>
+      <figure class="gallery-item"><img src="https://picsum.photos/seed/wedding5/900/900" alt="Photo 5" loading="lazy" /></figure>
+      <figure class="gallery-item"><img src="https://picsum.photos/seed/wedding6/800/700" alt="Photo 6" loading="lazy" /></figure>
+      <figure class="gallery-item"><img src="https://picsum.photos/seed/wedding7/700/1000" alt="Photo 7" loading="lazy" /></figure>
+      <figure class="gallery-item"><img src="https://picsum.photos/seed/wedding8/900/800" alt="Photo 8" loading="lazy" /></figure>
+      <figure class="gallery-item"><img src="https://picsum.photos/seed/wedding9/800/900" alt="Photo 9" loading="lazy" /></figure>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+    <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous">&#10094;</button>
+    <img id="lightboxImg" src="" alt="" />
+    <button class="lightbox-next" id="lightboxNext" aria-label="Next">&#10095;</button>
+  </div>
+
+  <footer class="site-footer">
+    <p data-i18n="footer.line">Sax &amp; Noon · 25.12.2026</p>
+  </footer>
+
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="meta.details.title">Details — Sax & Noon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&family=Noto+Sans+Thai:wght@300;400;500&family=Noto+Serif+Thai:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="brand">S &amp; N</a>
+    <nav class="site-nav">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="story.html" data-i18n="nav.story">Our Story</a>
+      <a href="gallery.html" data-i18n="nav.gallery">Gallery</a>
+      <a href="details.html" class="active" data-i18n="nav.details">Details</a>
+      <a href="rsvp.html" data-i18n="nav.rsvp">RSVP</a>
+    </nav>
+    <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
+      <span data-lang="th">TH</span> / <span data-lang="en">EN</span>
+    </button>
+    <button class="nav-burger" id="navBurger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <p class="eyebrow" data-i18n="details.eyebrow">Details</p>
+      <h1 data-i18n="details.title">Wedding Day</h1>
+      <p class="page-sub" data-i18n="details.sub">25 December 2026</p>
+    </section>
+
+    <section class="schedule">
+      <div class="schedule-item">
+        <div class="schedule-time">15:00</div>
+        <h3 data-i18n="details.s1.title">Ceremony</h3>
+        <p data-i18n="details.s1.body">พิธีมงคลสมรส · The Grand Ballroom</p>
+      </div>
+      <div class="schedule-item">
+        <div class="schedule-time">17:00</div>
+        <h3 data-i18n="details.s2.title">Cocktail Hour</h3>
+        <p data-i18n="details.s2.body">ค็อกเทลและคานาเป้ · The Garden Terrace</p>
+      </div>
+      <div class="schedule-item">
+        <div class="schedule-time">18:30</div>
+        <h3 data-i18n="details.s3.title">Reception &amp; Dinner</h3>
+        <p data-i18n="details.s3.body">งานเลี้ยงและอาหารค่ำ · The Grand Ballroom</p>
+      </div>
+      <div class="schedule-item">
+        <div class="schedule-time">21:00</div>
+        <h3 data-i18n="details.s4.title">Dancing</h3>
+        <p data-i18n="details.s4.body">เต้นรำและฉลองค่ำคืน · The Grand Ballroom</p>
+      </div>
+    </section>
+
+    <section class="venue">
+      <div class="venue-info">
+        <p class="eyebrow" data-i18n="details.venue.eyebrow">Venue</p>
+        <h2 data-i18n="details.venue.name">Demo Hotel Bangkok</h2>
+        <p data-i18n="details.venue.addr">123 ถ.ทดลอง แขวงทดสอบ เขตตัวอย่าง กรุงเทพฯ 10000</p>
+        <a class="btn btn-outline" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Grand+Hyatt+Erawan+Bangkok" data-i18n="details.venue.cta">Open in Google Maps</a>
+      </div>
+      <div class="venue-map">
+        <iframe
+          src="https://www.google.com/maps?q=Grand+Hyatt+Erawan+Bangkok&output=embed"
+          width="100%"
+          height="100%"
+          style="border:0"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section class="faq">
+      <h2 data-i18n="details.faq.title">Good to know</h2>
+      <div class="faq-grid">
+        <article>
+          <h4 data-i18n="details.faq.q1">Dress Code</h4>
+          <p data-i18n="details.faq.a1">Cocktail attire — โทนสีพาสเทลหรือโทนเอิร์ธ หลีกเลี่ยงสีขาว</p>
+        </article>
+        <article>
+          <h4 data-i18n="details.faq.q2">Parking</h4>
+          <p data-i18n="details.faq.a2">มีที่จอดรถฟรีในโรงแรม กรุณาแจ้งชื่อกับ valet</p>
+        </article>
+        <article>
+          <h4 data-i18n="details.faq.q3">Children</h4>
+          <p data-i18n="details.faq.a3">ยินดีต้อนรับเด็กๆ ทุกคน — กรุณาระบุจำนวนในแบบฟอร์ม RSVP</p>
+        </article>
+        <article>
+          <h4 data-i18n="details.faq.q4">Gifts</h4>
+          <p data-i18n="details.faq.a4">การมาร่วมงานคือของขวัญที่ดีที่สุดสำหรับเรา</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p data-i18n="footer.line">Sax &amp; Noon · 25.12.2026</p>
+  </footer>
+
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

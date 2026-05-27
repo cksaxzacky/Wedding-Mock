@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="meta.home.title">Sax & Noon — Wedding</title>
+  <meta name="description" data-i18n="meta.home.desc" content="งานแต่งงาน แซ็ก & นุ่น — 25 ธันวาคม 2026" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&family=Noto+Sans+Thai:wght@300;400;500&family=Noto+Serif+Thai:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="brand">S &amp; N</a>
+    <nav class="site-nav">
+      <a href="index.html" class="active" data-i18n="nav.home">Home</a>
+      <a href="story.html" data-i18n="nav.story">Our Story</a>
+      <a href="gallery.html" data-i18n="nav.gallery">Gallery</a>
+      <a href="details.html" data-i18n="nav.details">Details</a>
+      <a href="rsvp.html" data-i18n="nav.rsvp">RSVP</a>
+    </nav>
+    <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
+      <span data-lang="th">TH</span> / <span data-lang="en">EN</span>
+    </button>
+    <button class="nav-burger" id="navBurger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="hero-eyebrow" data-i18n="home.eyebrow">We are getting married</p>
+      <h1 class="hero-names">
+        <span data-i18n="names.first">Sax</span>
+        <span class="amp">&amp;</span>
+        <span data-i18n="names.second">Noon</span>
+      </h1>
+      <p class="hero-date" data-i18n="home.date">25 December 2026 · Bangkok</p>
+
+      <div class="countdown" id="countdown" data-target="2026-12-25T17:00:00+07:00">
+        <div><strong id="cd-days">--</strong><span data-i18n="home.days">Days</span></div>
+        <div><strong id="cd-hours">--</strong><span data-i18n="home.hours">Hours</span></div>
+        <div><strong id="cd-mins">--</strong><span data-i18n="home.mins">Minutes</span></div>
+        <div><strong id="cd-secs">--</strong><span data-i18n="home.secs">Seconds</span></div>
+      </div>
+
+      <a href="rsvp.html" class="btn btn-primary" data-i18n="home.cta">RSVP Now</a>
+    </section>
+
+    <section class="band">
+      <div class="band-inner">
+        <h2 data-i18n="home.welcome.title">With joy in our hearts</h2>
+        <p data-i18n="home.welcome.body">We invite you to share in our wedding day. Your presence is the greatest gift of all.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p data-i18n="footer.line">Sax &amp; Noon · 25.12.2026</p>
+  </footer>
+
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,560 @@
+/* =========================================================
+   Sax & Noon — Wedding · Minimal & Modern theme
+   ========================================================= */
+
+:root {
+  --bg: #FAF8F4;
+  --bg-soft: #F1ECE3;
+  --ink: #1A1A1A;
+  --ink-soft: #5A5A55;
+  --line: #E2DCCF;
+  --accent: #8B7355;
+  --accent-dark: #6F5C44;
+  --white: #FFFFFF;
+
+  --font-serif: 'Cormorant Garamond', 'Noto Serif Thai', Georgia, serif;
+  --font-sans: 'Inter', 'Noto Sans Thai', system-ui, -apple-system, Segoe UI, sans-serif;
+
+  --maxw: 1180px;
+  --radius: 2px;
+  --shadow: 0 1px 30px rgba(26, 26, 26, 0.06);
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+
+a {
+  color: var(--ink);
+  text-decoration: none;
+  transition: color .2s var(--ease), opacity .2s var(--ease);
+}
+a:hover { color: var(--accent); }
+
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+  margin: 0 0 .6em;
+}
+
+h1 { font-size: clamp(2.4rem, 5vw, 4rem); line-height: 1.1; }
+h2 { font-size: clamp(1.9rem, 3.5vw, 2.6rem); line-height: 1.2; }
+h3 { font-size: 1.4rem; }
+h4 { font-size: 1.1rem; }
+
+p { margin: 0 0 1em; color: var(--ink-soft); }
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: .75rem;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 1rem;
+}
+
+/* ---------- Header / Nav ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: rgba(250, 248, 244, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  letter-spacing: .15em;
+  font-weight: 500;
+}
+
+.site-nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.site-nav a {
+  font-size: .82rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  position: relative;
+  padding: .25rem 0;
+}
+
+.site-nav a.active,
+.site-nav a:hover { color: var(--ink); }
+
+.site-nav a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0; right: 0;
+  height: 1px;
+  background: var(--accent);
+}
+
+.lang-toggle {
+  background: none;
+  border: 1px solid var(--line);
+  color: var(--ink-soft);
+  padding: .4rem .8rem;
+  font-size: .75rem;
+  letter-spacing: .15em;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  transition: all .2s var(--ease);
+}
+.lang-toggle:hover { border-color: var(--accent); color: var(--accent); }
+.lang-toggle span.active { color: var(--ink); font-weight: 500; }
+
+.nav-burger {
+  display: none;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+}
+.nav-burger span {
+  display: block;
+  width: 22px;
+  height: 1px;
+  background: var(--ink);
+  margin: 5px auto;
+  transition: all .25s var(--ease);
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  padding: .9rem 2.2rem;
+  font-size: .82rem;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  font-family: var(--font-sans);
+  font-weight: 400;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all .25s var(--ease);
+  text-align: center;
+}
+.btn-primary {
+  background: var(--ink);
+  color: var(--white);
+}
+.btn-primary:hover { background: var(--accent); color: var(--white); }
+
+.btn-outline {
+  background: transparent;
+  border-color: var(--ink);
+  color: var(--ink);
+}
+.btn-outline:hover { background: var(--ink); color: var(--white); }
+
+/* ---------- Hero ---------- */
+.hero {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  background:
+    radial-gradient(ellipse at top, rgba(139, 115, 85, 0.06), transparent 60%),
+    var(--bg);
+}
+
+.hero-eyebrow {
+  font-size: .75rem;
+  letter-spacing: .4em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 2rem;
+}
+
+.hero-names {
+  font-family: var(--font-serif);
+  font-size: clamp(3rem, 9vw, 7rem);
+  font-weight: 300;
+  line-height: 1;
+  margin: 0 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
+}
+.hero-names .amp {
+  font-style: italic;
+  font-weight: 300;
+  color: var(--accent);
+  font-size: .8em;
+}
+
+.hero-date {
+  font-size: .9rem;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 3rem;
+}
+
+/* ---------- Countdown ---------- */
+.countdown {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.countdown > div {
+  min-width: 80px;
+  text-align: center;
+  padding: 1rem 1.2rem;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.5);
+}
+.countdown strong {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: .4rem;
+}
+.countdown span {
+  font-size: .68rem;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+/* ---------- Welcome band ---------- */
+.band {
+  background: var(--bg-soft);
+  padding: 6rem 2rem;
+  text-align: center;
+}
+.band-inner { max-width: 640px; margin: 0 auto; }
+.band p { font-size: 1.1rem; }
+
+/* ---------- Page heading ---------- */
+.page-head {
+  text-align: center;
+  padding: 6rem 2rem 3rem;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.page-head .page-sub {
+  font-size: 1rem;
+  color: var(--ink-soft);
+  margin-top: .5rem;
+}
+
+/* ---------- Timeline (story) ---------- */
+.timeline {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2rem 2rem 6rem;
+  position: relative;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 100px;
+  top: 2rem;
+  bottom: 6rem;
+  width: 1px;
+  background: var(--line);
+}
+.timeline-item {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 2rem;
+  padding: 2rem 0;
+  position: relative;
+}
+.timeline-year {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  color: var(--accent);
+  font-weight: 500;
+}
+.timeline-body { padding-left: 2rem; position: relative; }
+.timeline-body::before {
+  content: '';
+  position: absolute;
+  left: -5px;
+  top: .7rem;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+.timeline-body h3 { margin-bottom: .4rem; }
+
+/* ---------- Gallery ---------- */
+.gallery-grid {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 2rem 2rem 6rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.gallery-item {
+  margin: 0;
+  overflow: hidden;
+  cursor: pointer;
+  aspect-ratio: 1 / 1;
+  background: var(--bg-soft);
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .6s var(--ease), opacity .3s var(--ease);
+}
+.gallery-item:hover img { transform: scale(1.04); opacity: .92; }
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 18, 14, 0.92);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+.lightbox.open { display: flex; }
+.lightbox img { max-width: 90vw; max-height: 88vh; }
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  background: none;
+  border: 0;
+  color: var(--white);
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 1rem;
+  opacity: .8;
+  transition: opacity .2s var(--ease);
+}
+.lightbox-close:hover,
+.lightbox-prev:hover,
+.lightbox-next:hover { opacity: 1; }
+.lightbox-close { top: 1rem; right: 1.5rem; font-size: 2.5rem; }
+.lightbox-prev { left: 1rem; top: 50%; transform: translateY(-50%); }
+.lightbox-next { right: 1rem; top: 50%; transform: translateY(-50%); }
+
+/* ---------- Schedule ---------- */
+.schedule {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 2rem 4rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+.schedule-item {
+  padding: 2rem;
+  border: 1px solid var(--line);
+  background: var(--white);
+  text-align: center;
+}
+.schedule-time {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: .8rem;
+}
+.schedule-item h3 { margin-bottom: .4rem; }
+.schedule-item p { margin: 0; font-size: .92rem; }
+
+/* ---------- Venue ---------- */
+.venue {
+  max-width: var(--maxw);
+  margin: 4rem auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+.venue-info h2 { margin-bottom: 1rem; }
+.venue-info .btn { margin-top: 1rem; }
+.venue-map {
+  aspect-ratio: 4 / 3;
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+}
+
+/* ---------- FAQ ---------- */
+.faq {
+  background: var(--bg-soft);
+  padding: 5rem 2rem 6rem;
+  text-align: center;
+}
+.faq h2 { margin-bottom: 3rem; }
+.faq-grid {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  text-align: left;
+}
+.faq-grid h4 {
+  color: var(--accent);
+  margin-bottom: .4rem;
+  font-family: var(--font-sans);
+  font-size: .8rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.faq-grid p { margin: 0; }
+
+/* ---------- Form ---------- */
+.form-wrap {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem 2rem 6rem;
+}
+.rsvp-form .field {
+  margin-bottom: 1.5rem;
+}
+.rsvp-form label,
+.rsvp-form .label {
+  display: block;
+  font-size: .75rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: .6rem;
+  font-weight: 500;
+}
+.rsvp-form input,
+.rsvp-form select,
+.rsvp-form textarea {
+  width: 100%;
+  padding: .85rem 1rem;
+  border: 1px solid var(--line);
+  background: var(--white);
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--ink);
+  border-radius: 0;
+  transition: border-color .2s var(--ease);
+}
+.rsvp-form input:focus,
+.rsvp-form select:focus,
+.rsvp-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+.radio-row {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.radio-row label {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: .95rem;
+  color: var(--ink);
+  font-weight: 300;
+  cursor: pointer;
+  margin: 0;
+}
+.radio-row input { width: auto; margin: 0; }
+.rsvp-form .btn { width: 100%; margin-top: 1rem; }
+.form-status {
+  margin: 1.5rem 0 0;
+  text-align: center;
+  font-size: .92rem;
+  min-height: 1.5em;
+}
+.form-status.success { color: #2D6A4F; }
+.form-status.error { color: #B4332A; }
+
+/* ---------- Footer ---------- */
+.site-footer {
+  border-top: 1px solid var(--line);
+  text-align: center;
+  padding: 2.5rem 2rem;
+  font-size: .8rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.site-footer p { margin: 0; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 860px) {
+  .nav-burger { display: block; }
+  .site-nav {
+    position: absolute;
+    top: 100%;
+    left: 0; right: 0;
+    flex-direction: column;
+    background: var(--bg);
+    padding: 1.5rem 2rem;
+    gap: 1.5rem;
+    border-bottom: 1px solid var(--line);
+    transform: translateY(-10px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all .25s var(--ease);
+  }
+  .site-nav.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .schedule { grid-template-columns: 1fr; gap: 1rem; }
+  .venue { grid-template-columns: 1fr; }
+  .faq-grid { grid-template-columns: 1fr; }
+  .timeline::before { left: 60px; }
+  .timeline-item { grid-template-columns: 60px 1fr; gap: 1rem; }
+  .timeline-year { font-size: 1.1rem; }
+  .timeline-body { padding-left: 1.5rem; }
+  .site-header { padding: 1rem 1.2rem; }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid { grid-template-columns: 1fr; }
+  .countdown { gap: .5rem; }
+  .countdown > div { min-width: 64px; padding: .7rem .6rem; }
+  .countdown strong { font-size: 1.6rem; }
+  .hero { padding: 3rem 1.2rem; min-height: calc(100vh - 70px); }
+  .page-head { padding: 4rem 1.2rem 2rem; }
+}
