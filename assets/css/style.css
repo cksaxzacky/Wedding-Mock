@@ -284,7 +284,7 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
 .timeline::before {
   content: '';
   position: absolute;
-  left: 140px;
+  left: 180px;
   top: 2rem;
   bottom: 6rem;
   width: 1px;
@@ -292,19 +292,20 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
 }
 .timeline-item {
   display: grid;
-  grid-template-columns: 140px 1fr;
+  grid-template-columns: 180px 1fr;
   gap: 2rem;
   padding: 2rem 0;
   position: relative;
 }
 .timeline-year {
   font-family: var(--font-serif);
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: var(--accent);
   font-weight: 500;
   text-align: right;
-  padding-right: 1.25rem;
+  padding-right: 2.5rem;
   white-space: nowrap;
+  letter-spacing: 0.02em;
 }
 .timeline-body { padding-left: 2rem; position: relative; }
 .timeline-body::before {
@@ -546,9 +547,9 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   .schedule { grid-template-columns: 1fr; gap: 1rem; }
   .venue { grid-template-columns: 1fr; }
   .faq-grid { grid-template-columns: 1fr; }
-  .timeline::before { left: 100px; }
-  .timeline-item { grid-template-columns: 100px 1fr; gap: 1rem; }
-  .timeline-year { font-size: 1rem; padding-right: .75rem; }
+  .timeline::before { left: 120px; }
+  .timeline-item { grid-template-columns: 120px 1fr; gap: 1rem; }
+  .timeline-year { font-size: 1rem; padding-right: 1.25rem; }
   .timeline-body { padding-left: 1.5rem; }
   .site-header { padding: 1rem 1.2rem; }
 }
